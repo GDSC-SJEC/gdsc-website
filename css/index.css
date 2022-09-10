@@ -41,7 +41,7 @@ section#banner div.banner::before {
   box-shadow: 0 8px 16px rgba(50, 69, 107, 0.25);
   border-radius: 10px;
   z-index: -1;
-  
+
 }
 
 /* ********************************* Banner Contents ********************************* */
@@ -146,9 +146,11 @@ section#banner div.banner.loaded h2 div.clipBg {
   0% {
     clip-path: inset(0 100% 0 0);
   }
+
   50% {
     clip-path: inset(0 0 0 0);
   }
+
   100% {
     clip-path: inset(0 0 0 100%);
   }
@@ -165,6 +167,7 @@ section#banner div.banner.loaded a.btn_start {
   section#banner div.banner object {
     width: 40rem;
   }
+
   section#banner div.banner h1 span {
     font-size: 7rem;
   }
@@ -174,12 +177,15 @@ section#banner div.banner.loaded a.btn_start {
   section#banner div.banner object {
     width: 30rem;
   }
+
   section#banner div.banner h1 span {
     font-size: 6rem;
   }
+
   section#banner div.banner h2 span {
     font-size: 3rem;
   }
+
   section#banner div.banner h4 {
     font-size: 3.5rem;
   }
@@ -189,18 +195,22 @@ section#banner div.banner.loaded a.btn_start {
   section#banner div.banner object {
     width: 20rem;
   }
+
   section#banner div.banner h1 span {
     margin: 2rem auto;
     font-size: 5rem;
   }
+
   section#banner div.banner h2 span {
     margin: 1.5rem auto;
     font-size: 2.5rem;
   }
+
   section#banner div.banner h4 {
     margin: 1.5rem auto;
     font-size: 3rem;
   }
+
   section#banner div.banner a.btn_start {
     margin: 2rem auto;
     font-size: 2.2rem;
@@ -261,6 +271,12 @@ svg#GDSC.loaded line:nth-child(4) {
   stroke-dasharray: 320;
   stroke-dashoffset: 320;
   animation: line_reverse 0.4s ease forwards 0s;
+}
+
+@media screen and (max-width: 768px) {
+  .index-logo {
+    width: 100%;
+  }
 }
 
 /* ********************************* Styles End ********************************* */
