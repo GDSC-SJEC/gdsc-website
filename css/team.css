@@ -1,0 +1,406 @@
+/* ********************************* Team Page Styles ********************************* */
+
+body {
+  background: url(../assets/img/bg_shape.png) var(--darkwhite) fixed center /
+    cover;
+}
+
+/* ********************************* Team Section ********************************* */
+
+section#team div.team {
+  position: relative;
+  margin: 10rem auto;
+  padding: 2rem 4rem;
+}
+
+div.team h1 {
+  margin: 1rem auto;
+  padding: 0.5rem 0 00;
+  position: relative;
+  padding-left: 8rem;
+  font-size: 4rem;
+  font-weight: 500;
+  font-family: "Poppins";
+  color: black;
+  border: none;
+}
+
+@media screen and (max-width: 768px) {
+  div.team h1 {
+    padding-left: 4rem;
+  }
+}
+
+div.team h1 {
+  font-size: 4rem;
+}
+
+div.team h2 {
+  font-size: 3.5rem;
+}
+
+div.team h3 {
+  font-size: 3rem;
+}
+
+@media (max-width: 572px) {
+  div.team h1 {
+    font-size: 3.5rem;
+  }
+
+  div.team h2 {
+    font-size: 3rem;
+  }
+
+  div.team h3 {
+    font-size: 2.8rem;
+  }
+}
+
+#lead {
+  display: flex;
+  justify-content: center;
+}
+
+/* ********************************* Team Members ********************************* */
+
+div.team .member {
+  position: relative;
+  margin: 4rem auto;
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-gap: 4rem;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+  div.team .member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ********************************* Members Cards ********************************* */
+
+div.team .member .profile_card {
+  position: relative;
+  padding: 2rem;
+  width: 30rem;
+  height: 28rem;
+  /* height: auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  background: var(--darkwhite);
+  box-shadow: 4px 4px 10px 7px rgba(66, 133, 244, 0.25);
+  overflow: hidden;
+}
+
+/* Profile Image */
+div.team .member .profile_card img {
+  margin: auto auto 0.5rem;
+  width: 11.5rem;
+  height: 50%;
+  object-fit: cover;
+  background: var(--darkwhite);
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+}
+
+/* div.team .member .profile_card:hover img {
+  transform: scale(1.05);
+} */
+
+/* Profile Name */
+div.team .member .profile_card h4 {
+  margin: 1rem auto;
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: var(--mainfont);
+  color: var(--lightblack);
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+div.team .member .profile_card h4.lg {
+  font-size: 3rem;
+}
+
+/* div.team .member .profile_card:hover h4 {
+  transform: scale(0.9);
+} */
+
+/* Profile Tags */
+div.team .member .profile_card p {
+  position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  user-select: none;
+}
+
+div.team .member .profile_card p span {
+  margin: 0.2rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: var(--mainfont);
+  color: var(--darkblack);
+  text-align: center;
+  letter-spacing: 0.5px;
+  border-radius: 50px;
+}
+
+/* Tags Colors */
+div.team .member .profile_card p span.red {
+  background: var(--primaryred);
+}
+
+div.team .member .profile_card p span.blue {
+  background: var(--primaryblue);
+}
+
+div.team .member .profile_card p span.green {
+  background: var(--primarygreen);
+}
+
+div.team .member .profile_card p span.yellow {
+  background: var(--primaryyellow);
+}
+
+/* Profile Social Links */
+div.team .member .profile_card .social {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+/* div.team .member .profile_card:hover .social {
+  opacity: 1;
+} */
+
+div.team .member .profile_card .social a {
+  margin: 0.6rem;
+  padding: 1rem;
+  font-size: 2.5rem;
+  color: var(--darkblack);
+  background: var(--darkwhite);
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transform: translateY(20rem);
+  transition: all 0.2s ease, transform 0.5s cubic-bezier(0.1, 1.36, 0.55, 0.98);
+}
+
+/* div.team .member .profile_card:hover .social a {
+  transform: translateY(0);
+} */
+
+/* div.team .member .profile_card:hover .social a:nth-child(1) {
+  transition: transform 0.5s cubic-bezier(0.1, 1.36, 0.55, 0.98) 0;
+}
+
+div.team .member .profile_card:hover .social a:nth-child(2) {
+  transition: transform 0.5s cubic-bezier(0.1, 1.36, 0.55, 0.98) 0.1s;
+}
+
+div.team .member .profile_card:hover .social a:nth-child(3) {
+  transition: transform 0.5s cubic-bezier(0.1, 1.36, 0.55, 0.98) 0.2s;
+} */
+
+/* div.team .member .profile_card .social a:hover {
+  color: var(--darkwhite);
+  background: var(--darkblack);
+} */
+
+div.team .member .profile_card .social a i {
+  transition: transform 0.8s ease;
+}
+
+/* div.team .member .profile_card .social a:hover i {
+  transform: rotateY(1turn);
+} */
+
+#black {
+  color: #000 !important;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 11;
+  visibility: hidden;
+}
+
+#modal-container {
+  display: none;
+  position: fixed;
+  width: 30%;
+  height: 80%;
+  left: 35%;
+  top: 10%;
+  z-index: 12;
+  background: #fff;
+  box-shadow: 22px 19px 26px 4px rgba(0, 0, 0, 0.34);
+  border: 1px solid #171717;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 1268px) {
+  #modal-container {
+    width: 80%;
+    left: 10%;
+  }
+}
+
+#close-btn {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  font-size: 4em;
+  color: rgb(0, 0, 0);
+  background: rgba(255, 242, 242, 0.3);
+  backdrop-filter: blur(4px);
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#image {
+  width: 100%;
+  height: 61%;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+
+#modal-inner {
+  padding: 1em 5em 2rem 2rem;
+}
+
+#modal-name {
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+#modal-designation {
+  font-size: 2em;
+}
+
+#modal-description {
+  padding: 1em 0;
+  font-size: 1.4em;
+}
+
+#modal-more {
+  font-size: 1.5em;
+}
+
+#modal-container > div > div > a > i {
+  font-size: 3em;
+}
+
+#modal-flex {
+  padding-top: 5px;
+  display: flex;
+  gap: 20px;
+}
+
+.envel {
+  transform: scale(1.08);
+}
+
+@media screen and (max-width: 1668px) {
+  #modal-inner {
+    padding: 2em 2em 2rem 2rem;
+  }
+
+  #image {
+    width: 100%;
+    height: 50%;
+  }
+
+  #modal-name {
+    font-size: 2em;
+  }
+
+  #modal-designation {
+    font-size: 1.5em;
+  }
+
+  #modal-description {
+    padding: 1em 0;
+    font-size: 1.3em;
+  }
+
+  #modal-more {
+    font-size: 1.5em;
+  }
+
+  #modal-container > div > div > a > i {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 1268px) {
+  #modal-inner {
+    padding: 2em 2em 2rem 2rem;
+  }
+
+  #image {
+    width: 100%;
+    height: 70%;
+  }
+
+  #modal-name {
+    font-size: 2em;
+  }
+
+  #modal-designation {
+    font-size: 1.5em;
+  }
+
+  #modal-description {
+    padding: 1em 0;
+    font-size: 1.5em;
+  }
+
+  #modal-more {
+    font-size: 1.5em;
+  }
+
+  #modal-container > div > div > a > i {
+    font-size: 2em;
+  }
+}
+
+/* ********************************* Responsive Media ********************************* */
+
+/* Already Responsive */
+
+/* ********************************* Styles End ********************************* */
