@@ -72,7 +72,7 @@ let coreMemberDetails = [
     id: 6,
     name: "Pratheek R",
     avatar: "../assets/img/team/4SO19CS116.jpeg",
-    designation: `<span>Mobile Lead</span>`,
+    designation: `<span>Android Lead</span>`,
     description: 'Hi, I am an android developer focused on building apps according to the innovative and growing needs of the users. My areas of intrest include flutter and kotlin.',
     emailLink: "r.pratheek01@gmail.com",
     linkedinLink: "https://www.linkedin.com/in/pratheek-raghunath/",
