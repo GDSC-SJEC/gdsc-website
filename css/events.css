@@ -26,6 +26,11 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16), 0 4px 10px rgba(99, 161, 237, 0.657);
 }
 
+.card-link {
+  text-decoration: none;
+  color: #000;
+}
+
 .row {
   margin-bottom: 30px;
 }
