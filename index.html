@@ -3,7 +3,7 @@
 
 <head>
   <!-- Site Title -->
-  <title>GDSC SJEC</title>
+  <title>GDSC SJEC Home</title>
   <!-- Favicon-->
   <link rel="shortcut icon" type="image/svg" href="../assets/logo.svg" />
 
@@ -30,43 +30,312 @@
   <meta name="theme-color" content="#FFFFFF" />
   <!-- Windows -->
   <meta name="msapplication-navbutton-color" content="#FFFFFF" />
-
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" />
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="./css/settings.css" />
-  <link rel="stylesheet" href="./css/index.css" />
-
-  <!-- External JS -->
-  <!-- JS Lib CDN/File Links -->
+  <link rel="stylesheet" href="./css/header.css" />
+  <link rel="stylesheet" href="./css/footer.css" />
+  <link rel="stylesheet" href="./css/home.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/carousel.css" />
 
   <!-- Main JS -->
-  <script defer src="./js/index.js"></script>
+  <script defer src="../js/script.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+
 </head>
 
 <body>
-  <section id="banner">
-    <div class="banner">
-      <img src="logo.gif" alt="logo gif" class="index-logo" />
+  <!-- Header Navbar Start -->
 
-      <a href="./pages/home.html" class="btn btn_start">Lets Go!</a>
+  <header>
+    <nav>
+      <a class="navbar_brand" href="./index.html">
+        <img src="../assets/logo.svg" alt="Logo" />
+        <span>GDSC SJEC</span>
+      </a>
+
+      <button class="menu_toggle">
+        <span class="menu_toggle_icon"></span>
+      </button>
+
+      <div class="navbar_menus">
+        <a href="./index.html" class="nav_link active ">Home</a>
+        <a href="./pages/events.html" class="nav_link ">Events</a>
+        <a href="./pages/projects.html" class="nav_link">Projects</a>
+        <a href="./pages/team.html" class="nav_link">Team</a>
+        <a id="faq" target="_blank" href="https://faq.gdscsjec.in">FAQ</a>
+        <a id="join" target="_blank" href="https://gdsc.community.dev/st-joseph-engineering-college-mangaluru/">Join
+          Us</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Header Navbar End -->
+
+  <!--Carousel Starts-->
+  <div class="carousel-wrapper">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img src="../assets/img/carousel/1.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../assets/img/carousel/2.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../assets/img/carousel/3.jpg" />
+        </div>
+        <div class="swiper-slide"><img src="../assets/img/carousel/4.jpg" />
+        </div>
+        <div class="swiper-slide"><img src="../assets/img/carousel/5.jpg" />
+        </div>
+      </div>
+
+
+      <!-- Navigation buttons -->
+      <div class="swiper-button-prev swiper-btn"></div>
+      <div class="swiper-button-next swiper-btn"></div>
+
+
+    </div>
+  </div>
+
+  <!--Carousel End-->
+
+  <!-- Lottie JS file-->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <div class="container">
+
+    <h1 class="display-1 ">About Us</h1>
+
+    <div class="card mt-5 h-50 shadow-lg p-2 mb-5 bg-body rounded border border-0 rounded-5">
+      <div class="row g-0">
+        <div class="col-lg-6 col-sm-12">
+          <div style="display: flex; justify-content: center;">
+            <lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_nIhxTu.json" background="transparent"
+              speed="1" style="width: 60%" loop autoplay></lottie-player>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 mx-0 position-relative">
+          <div class="position-relative top-50 start-50 translate-middle ">
+
+            <h5 class="display-1 fw-bold">Learn</h5>
+            <p class="fs-1 mt-5">
+              Learn about a range of technical topics and gain new skills.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
-  </section>
+    <div class="card mt-5 h-50 shadow-lg p-2 mb-5 bg-body rounded border border-0 rounded-5">
+      <div class="row g-0">
+        <div class="col-lg-6 col-sm-12">
+          <div style="display: flex; justify-content: center;">
+
+            <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_ffkzpglj.json" background="transparent"
+              speed="1" style="width: 60%" loop autoplay></lottie-player>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 mx-0 position-relative">
+          <div class="position-relative top-50 start-50 translate-middle ">
+
+            <h5 class="display-1 fw-bold">Connect</h5>
+            <p class="fs-1 mt-5">
+              Meet students interested in developer technologies at SJEC
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt-5 h-50 shadow-lg p-2 mb-5 bg-body rounded border border-0 rounded-5">
+      <div class="row g-0">
+        <div class="col-lg-6 col-sm-12">
+          <div style="display: flex; justify-content: center;">
+
+            <lottie-player src="https://assets2.lottiefiles.com/private_files/lf30_sb6vbhi6.json"
+              background="transparent" speed="1" style="width: 60%" loop autoplay></lottie-player>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12mx-0 position-relative">
+          <div class="position-relative top-50 start-50 translate-middle ">
+
+            <h5 class="display-1 fw-bold">Grow</h5>
+            <p class="fs-1 mt-5">
+              Apply new learnings to build great solutions for local problems.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt-5 h-50 shadow-lg p-2 mb-5 bg-body rounded border border-0 rounded-5">
+      <div class="row g-0">
+        <div class="col-lg-6 col-sm-12">
+          <div style="display: flex; justify-content: center;">
+
+            <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_xo63wtwd.json" background="transparent"
+              speed="1" style="width: 60%" loop autoplay></lottie-player>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 mx-0 position-relative">
+          <div class="position-relative top-50 start-50 translate-middle ">
+
+            <h5 class="display-1 fw-bold">Concept of DSC</h5>
+            <p class="fs-1 mt-5">
+              The DSC program is a grassroots channel through which Google provides development, mobile & web
+              development skills for students, towards employability
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt-5 h-50 shadow-lg p-2 mb-5 bg-body rounded border border-0 rounded-5">
+      <div class="row g-0">
+        <div class="col-lg-6 col-sm-12">
+          <div style="display: flex; justify-content: center;">
+
+            <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_x3iibsyx.json" background="transparent"
+              speed="1" style="width: 60%" loop autoplay></lottie-player>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 mx-0 position-relative">
+          <div class="position-relative top-50 start-50 translate-middle ">
+
+            <h5 class="display-1 fw-bold">Why DSC?</h5>
+            <p class="fs-1 mt-5">
+              For students to learn development skills, solve problems through technology and inspire them to be world
+              class developers and changemakers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt-5 h-50 shadow-lg p-2 mb-5 bg-body rounded border border-0 rounded-5">
+      <div class="row g-0">
+        <div class="col-lg-6 col-sm-12">
+          <div style="display: flex; justify-content: center;">
+
+            <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_0jy3ggvf.json" background="transparent"
+              speed="1" style="width: 60%" loop autoplay></lottie-player>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 mx-0 position-relative">
+          <div class="position-relative top-50 start-50 translate-middle ">
+
+            <h5 class="display-1 fw-bold">Target Audience</h5>
+            <p class="fs-1 mt-5">
+              DSC activities are targeted at University students and any others including faculty members who want to
+              learn development skills & work to solve real-life problems. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
 
+  <!-- Footer Start -->
+  <footer>
+    <!-- Footer Desc -->
+    <div class="footer_desc">
+      <div class="d-flex align-items-center logo-items">
+        <img src="../assets/logo.png" alt="logo" class="logo">
+        <div>
+          <div class="title">Google Developer Student Clubs</div>
+          <div class="subtitle">St Joseph Engineering College, Mangalore</div>
+        </div>
+      </div>
+      <h2>Connect With Us</h2>
+      <div class="icons">
+        <a href="mailto:gdsc@sjec.ac.in" class="join_btn">
+          <i class="bx bxs-envelope"></i>
+        </a>
+        <a href="https://www.instagram.com/gdsc.sjec/" class="join_btn">
+          <i class="bx bxl-instagram"></i>
+        </a>
+        <a href="https://in.linkedin.com/company/gdsc-sjec" class="join_btn">
+          <i class="bx bxl-linkedin-square"></i>
+        </a>
+        <!-- <a href="#" class="join_btn">
+          <i class="bx bxl-discord"></i>
+        </a> -->
+        <a href="https://github.com/GDSC-SJEC" class="join_btn">
+          <i class="bx bxl-github"></i>
+        </a>
+      </div>
+    </div>
 
+    <!-- Footer Links -->
+    <div class="footer_links">
+      <h2>Quick Links</h2>
+      <span>
+        <a href="https://gdscsjec.in/index.html">Home</a>
+        <a href="https://gdscsjec.in/pages/about.html">About</a>
+        <a href="https://gdscsjec.in/pages/events.html">Events</a>
+        <a href="https://gdscsjec.in/pages/projects.html">Projects</a>
+        <a href="https://gdscsjec.in/pages/team.html">Team</a>
+      </span>
+    </div>
 
-
-
-  <!--
-		******************************
-		Note:
-		Don't add anything extra in this file (index.html).
-		This is only landing for the website.
-		******************************
-	-->
+    <!-- Footer Contact -->
+    <div class="footer_contact">
+      <iframe class="footer-iframe"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15555.804461198462!2d74.8986305!3d12.9108635!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa7bf228838232d32!2sSt%20Joseph%20Engineering%20College!5e0!3m2!1sen!2sbh!4v1662715379561!5m2!1sen!2sbh"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js"
+  crossorigin="annonymous"></script>
+<script>
+  const swiper = new Swiper(".swiper", {
+    // Optional parameters
+    direction: "horizontal",
+    breakpoints: {
+      320: {
+        slidesPerView: 3,
+      },
+      520: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+      1600: {
+        slidesPerView: 3,
+      },
+    },
+    loop: true,
+    spaceBetween: 50,
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+  });
+
+</script>
+
 
 </html>
