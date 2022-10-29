@@ -1,8 +1,9 @@
 /* ********************************* Header Section ********************************* */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&display=swap");
+
 header {
   padding: 0.8rem;
-  z-index:10;
+  z-index: 10;
   width: 90vw;
   height: 10vh;
   background: #ffffff;
@@ -10,7 +11,7 @@ header {
   border-radius: 20px;
   position: fixed;
   top: 3vh;
-  left:5vw;
+  left: 5vw;
 }
 
 header nav {
@@ -26,19 +27,23 @@ header nav {
   width: 150px;
   color: rgba(66, 133, 244, 1);
 }
+
 #faq:hover {
   color: white;
 }
+
 #join {
   background-color: rgba(66, 133, 244, 1);
   color: white;
   width: 150px;
   box-shadow: 4px 4px 10px 1px rgba(66, 133, 244, 0.7);
 }
+
 #join:hover {
   background-color: white;
   color: rgba(66, 133, 244, 1);
 }
+
 /* ********************************* Header Nav Brand ********************************* */
 
 header nav a.navbar_brand {
@@ -59,12 +64,9 @@ header nav a.navbar_brand span {
   margin: auto 0.5rem;
   margin-top: 0.5rem;
   font-size: 2.8rem;
-  font-weight: 700;
+  font-weight: 600;
   font-family: "Poppins";
-  font-weight: 500;
   color: black;
-  letter-spacing: -2px;
-  word-spacing: -2px;
 }
 
 /* ********************************* Header Desktop Navbar ********************************* */
@@ -97,6 +99,7 @@ header nav div.navbar_menus a {
 header nav div.navbar_menus a.active {
   color: #4285f4;
 }
+
 header nav div.navbar_menus a:hover {
   background-color: #4285f4;
   color: white;
@@ -121,7 +124,7 @@ header nav div.navbar_menus a:hover {
     transition: all 0.3s ease;
   }
 
-  header nav button.menu_toggle.active + div.navbar_menus {
+  header nav button.menu_toggle.active+div.navbar_menus {
     clip-path: inset(0 0 0 0);
   }
 }
@@ -167,6 +170,7 @@ header nav button.menu_toggle span.menu_toggle_icon::after {
 header nav button.menu_toggle span.menu_toggle_icon::before {
   top: -1rem;
 }
+
 header nav button.menu_toggle span.menu_toggle_icon::after {
   top: 1rem;
 }
@@ -205,19 +209,25 @@ header nav button.menu_toggle.active span.menu_toggle_icon::after {
   }
 }
 
+@media (max-width: 1200px) {
+  header nav a.navbar_brand span {
+    display: none;
+  }
+}
+
 @media (max-width: 992px) {
   header {
     padding: 1rem 3rem;
   }
-  header nav{
-    top:25%;
+
+  header nav {
+    top: 25%;
   }
+
   header nav a.navbar_brand img {
     width: 6.5rem;
   }
-  header nav a.navbar_brand span {
-    display: none;
-  }
+
   header nav div.navbar_menus a::after {
     height: 3px;
   }
@@ -233,8 +243,9 @@ header nav button.menu_toggle.active span.menu_toggle_icon::after {
   header {
     padding: 0;
   }
-   header nav{
-    top:0%;
+
+  header nav {
+    top: 0%;
   }
 
   header nav div.navbar_menus a {

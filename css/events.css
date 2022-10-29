@@ -15,7 +15,7 @@
   padding-left: 10px;
   padding-right: 10px;
   text-align: center;
-  width: 130px;
+  width: 150px;
   height: 25px;
 }
 
@@ -24,7 +24,18 @@
   float: none;
   margin-bottom: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16), 0 4px 10px rgba(99, 161, 237, 0.657);
-  min-height: 420px;
+  min-height: 450px;
+}
+
+.btn {
+  font-size: 12px;
+  padding: 5px 30px;
+  background-color: #d0e1fd;
+  border-radius: 10px;
+}
+
+.card:hover .btn {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16), 0 4px 10px rgba(99, 161, 237, 0.657);
 }
 
 .card-link {
