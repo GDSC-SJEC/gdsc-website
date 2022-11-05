@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Google DSC SJEC Home</title>
+  <link rel="shortcut icon" type="image/svg" href="./assets/logo.svg" />
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+  <meta name="author" content="Google DSC SJEC" />
+  <meta name="description" content="Welcome to Google Developer Student Clubs SJEC" />
+  <meta name="keywords" content="gdsc, sjec, google, developer, club" />
+
+  <meta property="og:site_name" content="Google DSC SJEC" />
+  <meta property="og:title" content="Google DSC SJEC" />
+  <meta property="og:description" content="Welcome to Google Developer Student Clubs SJEC" />
+  <meta property="og:image" content="./assets/img/ui/opengraph.png" />
+
+  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="msapplication-navbutton-color" content="#FFFFFF" />
+
+  <!-- Third party modules -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js"
+    crossorigin="annonymous"></script>
+  <script defer src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <!-- Bundled scripts and styles -->
+  <link rel="stylesheet" href="./style.css" />
+  <script defer src="./main.js"></script>
+
+  <script type="module">
+    await Promise.allSettled([
+      customElements.whenDefined('header-element'),
+      customElements.whenDefined('footer-element'),
+      customElements.whenDefined('about-element')
+    ]);
+    document.body.classList.add('ready');
+  </script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header-element page="home"></header-element>
+
+  <!--Carousel Starts-->
+  <div class="carousel-wrapper">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img class="swiper-image" alt="image1" loading="lazy" src="./assets/img/carousel/1.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img class="swiper-image" alt="image2" loading="lazy" src="./assets/img/carousel/2.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img class="swiper-image" alt="image3" loading="lazy" src="./assets/img/carousel/3.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img class="swiper-image" alt="image4" loading="lazy" src="./assets/img/carousel/4.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img class="swiper-image" alt="image5" loading="lazy" src="./assets/img/carousel/5.jpg" />
+        </div>
+      </div>
+      <!-- Navigation buttons -->
+      <div class="swiper-button-prev swiper-btn"></div>
+      <div class="swiper-button-next swiper-btn"></div>
+    </div>
+  </div>
+  <!--Carousel End-->
+
+  <!-- About Section -->
+  <h1 class="about-title">About Us</h1>
+  <about-element></about-element>
+  </div>
+
+  <!-- Footer -->
+  <footer-element></footer-element>
+
+</body>
+
+</html>

@@ -1,3 +1,6 @@
 .vercel
 node_modules
-dist
+
+# Ignoring compiled JS and CSS
+dist/main.js
+dist/style.css
