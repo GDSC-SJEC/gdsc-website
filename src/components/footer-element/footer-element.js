@@ -32,10 +32,10 @@ template.innerHTML = `
         <h2>Quick Links</h2>
         <span>
             <a href="https://gdscsjec.in/index.html">Home</a>
-            <a href="https://gdscsjec.in/pages/about.html">About</a>
-            <a href="https://gdscsjec.in/pages/events.html">Events</a>
-            <a href="https://gdscsjec.in/pages/projects.html">Projects</a>
-            <a href="https://gdscsjec.in/pages/team.html">Team</a>
+            <a href="https://gdscsjec.in/about.html">About</a>
+            <a href="https://gdscsjec.in/events.html">Events</a>
+            <a href="https://gdscsjec.in/projects.html">Projects</a>
+            <a href="https://gdscsjec.in/team.html">Team</a>
         </span>
         </div>
 
