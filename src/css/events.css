@@ -37,3 +37,22 @@
   background-color: #eee;
   border-radius: 15px;
 }
+
+.event-card-button {
+  display: inline-block;
+  margin: 5px 0;
+
+  font-size: 14px;
+  font-weight: 400;
+  padding: 5px 10px;
+  background-color: #eee;
+  border-radius: 15px;
+  transition: all 300ms ease-in-out;
+
+  text-decoration: none;
+  color: #000;
+}
+
+.event-card-button:hover {
+  background-color: #aaa;
+}

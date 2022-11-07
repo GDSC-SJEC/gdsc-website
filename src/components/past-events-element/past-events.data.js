@@ -26,6 +26,7 @@ export const pastEventCardDetails = [
 		datetime: '30th October - 4th November, 2022',
 		image_url: './assets/img/events/reel-it-in.png',
 		description: `Do you have what it takes to be the content creator for Google DSC?! Let's put your creativity skills to the test!`,
-		button: 'Know More',
+		brochure_link:
+			'https://drive.google.com/file/d/1JGFhjiqNl7DDpBR2xRKbjn4KN9ATtHbb/view?usp=sharing',
 	},
 ];
