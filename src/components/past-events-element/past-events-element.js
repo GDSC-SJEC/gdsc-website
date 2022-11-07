@@ -19,7 +19,12 @@ if (pastEventCardDetails.length > 0) {
 										}</div>
 					${
 						card.brochure_link
-							? `<a href="${card.brochure_link}" target="_blank" class="event-card-button">View Brochure</a>`
+							? `<a href="${card.brochure_link}" target="_blank" class="event-card-button"><i class="bx bx-sm bx-file"></i> View Brochure</a>`
+							: ''
+					}
+					${
+						card.youtube_link
+							? `<a href="${card.youtube_link}" target="_blank" class="event-card-button"><i class="bx bx-sm bxl-youtube"></i> Watch Now</a>`
 							: ''
 					}
                 </div>
@@ -37,7 +42,8 @@ class PastEventsElement extends HTMLElement {
 		wrapper.classList.add('cards-container');
 		wrapper.appendChild(container.content.cloneNode(true));
 		template.innerHTML =
-			'<link rel="stylesheet" href="./style.css" />' + wrapper.outerHTML;
+			'<link rel="stylesheet" href="./style.css" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css" />' +
+			wrapper.outerHTML;
 		this.shadowRoot.appendChild(template.content.cloneNode(true));
 	}
 }

@@ -12,6 +12,7 @@ export const pastEventCardDetails = [
 		datetime: '10th September, 2022',
 		image_url: './assets/img/events/launch.png',
 		description: `A formal session where we officially launch Google DSC SJEC. We also showed the website as well as the discord bot that we are developed.`,
+		youtube_link: `https://www.youtube.com/watch?v=bxm3OdAiKrs`,
 	},
 	{
 		id: 3,
@@ -19,6 +20,7 @@ export const pastEventCardDetails = [
 		datetime: '17th September, 2022',
 		image_url: './assets/img/events/compose-camp.png',
 		description: `This event introduces you to the Android App development using Compose. You will get an understanding of the content and pathways.`,
+		youtube_link: `https://www.youtube.com/playlist?list=PLTjG9HXWOEA69_STciUwTLGIjBpx1kwYG`,
 	},
 	{
 		id: 4,
