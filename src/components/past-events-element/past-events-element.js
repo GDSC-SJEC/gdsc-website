@@ -5,7 +5,7 @@ const wrapper = document.createElement('div');
 const container = document.createElement('template');
 
 if (pastEventCardDetails.length > 0) {
-	Object.values(pastEventCardDetails).map((card) => {
+	Object.values(pastEventCardDetails.reverse()).map((card) => {
 		wrapper.innerHTML += `
             <div class="event-card">
                 <img class="event-image" src="${card.image_url}" alt="${card.title}">
@@ -18,7 +18,7 @@ if (pastEventCardDetails.length > 0) {
         `;
 	});
 } else {
-	wrapper.innerHTML = `No past events`;
+	wrapper.innerHTML = `No past events.`;
 }
 
 class PastEventsElement extends HTMLElement {

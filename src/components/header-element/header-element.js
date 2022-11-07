@@ -13,7 +13,7 @@ template.innerHTML = `
             </button>
 
             <div class="navbar_menus">
-                <a page="home" href="/index.html" class="nav_link">Home</a>
+                <a page="home" href="./index.html" class="nav_link">Home</a>
                 <a page="events" href="./events.html" class="nav_link">Events</a>
                 <a page="projects" href="./projects.html" class="nav_link">Projects</a>
                 <a page="team" href="./team.html" class="nav_link">Team</a>

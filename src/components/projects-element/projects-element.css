@@ -21,6 +21,7 @@
 
 .project-card-link {
     display: inline-flex;
+    justify-self: flex-end;
     gap: 5px;
     align-items: center;
     margin: 5px 0;

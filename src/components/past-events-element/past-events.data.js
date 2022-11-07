@@ -20,4 +20,12 @@ export const pastEventCardDetails = [
 		image_url: './assets/img/events/compose-camp.png',
 		description: `This event introduces you to the Android App development using Compose. You will get an understanding of the content and pathways.`,
 	},
+	{
+		id: 4,
+		title: 'REEL IT IN!',
+		datetime: '30th October - 4th November, 2022',
+		image_url: './assets/img/events/reel-it-in.png',
+		description: `Do you have what it takes to be the content creator for Google DSC?! Let's put your creativity skills to the test!`,
+		button: 'Know More',
+	},
 ];

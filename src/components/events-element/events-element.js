@@ -5,7 +5,7 @@ const wrapper = document.createElement('div');
 const container = document.createElement('template');
 
 if (eventCardDetails.length > 0) {
-	Object.values(eventCardDetails).map((card) => {
+	Object.values(eventCardDetails.reverse()).map((card) => {
 		container.innerHTML += `            
             <div class="event-card">
                 <img class="event-image" src="${card.image_url}" alt="${card.title}" />
@@ -18,7 +18,7 @@ if (eventCardDetails.length > 0) {
         `;
 	});
 } else {
-	wrapper.innerHTML = `No upcoming events`;
+	wrapper.innerHTML = `No upcoming events.`;
 }
 
 class EventsElement extends HTMLElement {

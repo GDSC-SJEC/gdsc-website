@@ -5,15 +5,15 @@ const wrapper = document.createElement('div');
 const container = document.createElement('template');
 
 if (projectCardDetails.length > 0) {
-	Object.values(projectCardDetails).map((card) => {
+	Object.values(projectCardDetails.reverse()).map((card) => {
 		container.innerHTML += `            
             <div class="project-card">
                 <img class="project-image" src="${card.image_url}" alt="${card.title}" />
                 <div class="project-body">
                     <div class="project-card-title">${card.title}</div>
-                    <div class="project-card-description">${card.description}</div>
-                    <a target="_blank" class="project-card-link" href="${card.github_link}"><i class="bx bxl-github bx-sm"></i><span>Checkout this project</span></a>
-                </div>
+					<div class="project-card-description">${card.description}</div>
+					<a target="_blank" class="project-card-link" href="${card.github_link}"><i class="bx bxl-github bx-sm"></i><span>Checkout this project</span></a>
+				</div>
             </div>
         `;
 	});

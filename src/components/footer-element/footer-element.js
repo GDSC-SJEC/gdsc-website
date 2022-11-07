@@ -31,11 +31,10 @@ template.innerHTML = `
         <div class="footer_links">
         <h2>Quick Links</h2>
         <span>
-            <a href="https://gdscsjec.in/index.html">Home</a>
-            <a href="https://gdscsjec.in/about.html">About</a>
-            <a href="https://gdscsjec.in/events.html">Events</a>
-            <a href="https://gdscsjec.in/projects.html">Projects</a>
-            <a href="https://gdscsjec.in/team.html">Team</a>
+            <a href="./index.html">Home</a>
+            <a href="./events.html">Events</a>
+            <a href="./projects.html">Projects</a>
+            <a href="./team.html">Team</a>
         </span>
         </div>
 
