@@ -32,6 +32,7 @@
   box-shadow: 22px 19px 26px 4px rgba(0, 0, 0, 0.34);
   border: 1px solid #171717;
   border-radius: 20px;
+  overflow-y: auto;
 }
 
 @media screen and (max-width: 1268px) {

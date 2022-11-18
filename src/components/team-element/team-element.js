@@ -75,6 +75,7 @@ class TeamElement extends HTMLElement {
 
 		guidePopup.style.display = 'block';
 		document.getElementById('overlay').style.visibility = 'visible';
+		document.querySelector('body').style.overflowY = 'hidden';
 	}
 }
 customElements.define('team-element', TeamElement);

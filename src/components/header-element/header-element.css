@@ -98,18 +98,18 @@ header nav div.navbar_menus a.join-link:hover {
 
 @media (max-width: 968px) {
   header nav div.navbar_menus {
-    margin: 0;
+    margin: 0 4%;
     padding: 1rem 6rem;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 92%;
     z-index: 1000;
     transform: translateY(20%);
     flex-direction: column;
     background: var(--darkwhite);
-    border: none;
-    border-bottom: 2px solid rgba(50, 69, 107, 0.2);
+    border: 1px solid rgb(66 133 244 / 50%);
+    border-top: none;
     clip-path: inset(0 0 100% 0);
     transition: all 0.3s ease;
   }
@@ -123,8 +123,9 @@ header nav div.navbar_menus a.join-link:hover {
 
 header nav button.menu_toggle {
   position: relative;
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
+  z-index: 1001;
   background: none;
   border: none;
   outline: none;
@@ -194,8 +195,8 @@ header nav button.menu_toggle.active span.menu_toggle_icon::after {
   }
 
   header nav div.navbar_menus a {
-    margin: auto 0.3rem;
-    padding: 0.5rem 1rem;
+    margin: 0.8rem auto;
+    font-size: 1.2rem;
   }
 }
 

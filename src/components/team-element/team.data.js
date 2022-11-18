@@ -5,7 +5,7 @@ export const leadMemberDetails = [
 		image_url: './assets/img/team/4SO19CS110.jpg',
 		designation: `<span>GDSC Lead</span>`,
 		description:
-			'An enthusiastic engineering undergraduate with problem solving, project and team managing abilities. Passionate about coding, backend development and game development. Always on a lookout for better means to gain knowledge and improve my skills through contribution.',
+			'An enthusiastic engineering undergraduate with problem solving, project and team managing abilities. Passionate about coding, backend development and game development.',
 		emailLink: 'pragnya.nagure2002@gmail.com',
 		linkedinLink: 'https://www.linkedin.com/in/pragnya-nagure/',
 		githubLink: 'https://github.com/xxpsynagure',
