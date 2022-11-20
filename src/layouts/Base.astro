@@ -1,0 +1,81 @@
+---
+import { pwaInfo } from 'virtual:pwa-info';
+import { Seo } from 'astro-seo-meta';
+import Header from "#/components/Header.astro";
+import Footer from "#/components/Footer.astro";
+import "#/styles/index.css";
+
+const { title, description } = Astro.props;
+---
+<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="name" content="GDSC DSC SJEC">
+    <meta >
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#317EFB"/>
+    <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/favicons/apple-touch-icon.png"
+    />
+    <Seo
+      title={title}
+      description={description}
+      keywords={["gdsc", "sjec", "gdsc-sjec"]}
+      icon="favicon.svg?v=3"
+      colorScheme="dark"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap"
+      />
+
+    </noscript>
+    <script src="src/scripts/pwa.ts"></script>
+    <script is:inline>
+      const themeSaved = localStorage.getItem("theme");
+      if (themeSaved) {
+        document.documentElement.dataset.theme = themeSaved;
+      } else {
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+      }
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (event) => {
+          if (!localStorage.getItem("theme")) {
+            document.documentElement.dataset.theme = event.matches
+              ? "dark"
+              : "light";
+          }
+        });
+    </script>
+  </head>
+  <body
+    class="h-full overflow-x-hidden text-base bg-default text-default selection:bg-secondary selection:text-white"
+  >
+    <Header />
+    <slot/>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,25 @@
+body {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+  }
+  
+  body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+    
+  a,
+  .btn {
+    @apply transition-colors duration-200;
+    @apply hover:text-secondary;
+  }
+  
+  .gradient-text {
+    @apply text-transparent bg-clip-text;
+    @apply bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500;
+  }
+  
+  a:link {
+    outline: none; /* removes outline */
+    text-decoration: none;
+  }
