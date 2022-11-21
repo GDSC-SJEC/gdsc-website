@@ -49,7 +49,7 @@ const { title, description } = Astro.props;
       />
 
     </noscript>
-    <script src="src/scripts/pwa.ts"></script>
+    <script src="src/pwa.ts"></script>
     <script is:inline>
       const themeSaved = localStorage.getItem("theme");
       if (themeSaved) {
@@ -75,7 +75,11 @@ const { title, description } = Astro.props;
     class="h-full overflow-x-hidden text-base bg-default text-default selection:bg-secondary selection:text-white"
   >
     <Header />
-    <slot/>
-    <Footer />
+		<main>
+			<article>
+				<slot />
+			</article>
+		</main>
+		<Footer />
   </body>
 </html>

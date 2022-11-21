@@ -45,7 +45,11 @@ export default defineConfig({
     },
     workbox: {
       globPatterns: ['**/*.{css,js,html,svg,png,ico,txt}'],
-    }
+    },
+    devOptions: {
+      enabled: true
+    },
+    disable: true
   }),
   purgecss({
     fontFace: true,
