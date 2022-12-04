@@ -1,74 +1,139 @@
 ---
 import Base from "#/layouts/Base.astro";
+import TeamCard from "#/components/TeamCard.astro";
 export interface Member {
-    image: string
+    usn: string
     uname: string
     position: string
     description: string,
-    message: string,
+    email: string,
     linkedin: string,
     github: string
 }
-const team: Array<Member> = [{
-    image: 'https://gdscsjec.in/assets/img/team/4SO19CS110.jpg',
+const team: Array<Member> = [{  
+    usn: '4SO19CS110',
     uname: 'Pragnya Nagure',
     position: 'GDSC Lead',
     description: 'An enthusiastic engineering undergraduate with problem solving, project and team managing abilities. Passionate about coding, backend development and game development.',
-    message: 'pragnya.nagure2002@gmail.com',
+    email: 'mailto:pragnya.nagure2002@gmail.com',
     linkedin: 'https://www.linkedin.com/in/pragnya-nagure/',
     github: 'https://github.com/xxpsynagure'
 
 },
 {
-    image: 'https://gdscsjec.in/assets/img/team/4SO19CS027.png',
+    usn: '4SO19CS027',
     uname: 'Ashish Kishore Kumar',
     position: 'Game Development Lead',
     description: 'I\'m an aspiring Unity Game Developer from India. I love playing games and am currently developing games in Unity and exploring each genre with each personal project I build.',
-    message: 'ashishkishore0812@gmail.com',
+    email: 'mailto:ashishkishore0812@gmail.com',
     linkedin: 'https://www.linkedin.com/in/ashish-kishore-kumar/',
-    github: 'https://github.com/Ashish4869'
-
-
-}]
+    github: 'https://github.com/Ashish4869' 
+},
+{
+    usn: '4SO19CS056',
+    uname: 'Godnon Dsilva',
+    position: 'Web Development Lead',
+    description: 'Hi, I\'m a Full Stack Developer, specializing in JavaScript and Python. I enjoy building everything from small business apps to interactive web apps.',
+    email: 'godnondsilva@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/godnon-dsilva',
+    github: 'https://github.com/godnondsilva' 
+},
+{
+    usn: '4SO19CS034',
+    uname: 'Avinash Murali',
+    position: 'UI/UX Lead',
+    description: 'I like watching anime and creating apps with cool aesthetics and design',
+    email: 'avinashmuralidharan2@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/avinash-muralidharan-75b1a9226',
+    github: 'https://github.com/avi7501' 
+},
+{
+    usn: '4SO19CS119',
+    uname: 'Pravin Kumar',
+    position: 'AI/ML Lead',
+    description: 'Hi, I\'m a Python developer with a zest for new technologies. My study is focused on Machine Learning and Deep Learning.',
+    email: '19cs119.pravin@sjec.ac.in',
+    linkedin: 'https://www.linkedin.com/in/pravin--kumar/',
+    github: 'https://github.com/pravin-pk' 
+},
+{
+    usn: '4SO19CS180',
+    uname: 'Yashas Ip',
+    position: 'Competitive Programming Lead',
+    description: 'Hi, I\'m a developer who loves fixing complex problems with code.I started out as an eager individual who wanted to learn more about the things that could be done with computers.I\'ve spent a lot of time coding and trying to figure out what good code feels like. I\'m always happy to answer any questions you might have.',
+    email: '19cs180.yashas@sjec.ac.in',
+    linkedin: 'https://www.linkedin.com/in/yashas-ip-4926641b4/',
+    github: 'https://github.com/yashasip' 
+},
+{
+    usn: '4SO19CS116',
+    uname: 'Pratheek R',
+    position: 'Android Lead',
+    description: 'Hi, I am an android developer focused on building apps according to the innovative and growing needs of the users. My areas of intrest include flutter and kotlin.',
+    email: 'r.pratheek01@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/pratheek-raghunath/',
+    github: 'https://github.com/pratheek-raghunath' 
+},
+{
+    usn: '4SO19CS105',
+    uname: 'Oren Saldanha',
+    position: 'Cloud Lead',
+    description: 'Hi, I\'m a backend developer with a deep interest in building systems.I\'m currently learning about cloud native technologies.',
+    email: 'orensaldanha@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/orensaldanha/',
+    github: 'https://github.com/orensaldanha' 
+},
+{
+    usn: '4SO19CS007',
+    uname: 'Adithya K Shetty',
+    position: 'Web Team',
+    description: 'Hi there i am a developer(web/app/ui/ux), I like to explore different fields of software development & like to work with different tech stacks.',
+    email: '4so19cs007.adithya@sjec.ac.in',
+    linkedin: 'https://www.linkedin.com/in/adithya-k-shetty-107842190',
+    github: 'https://github.com/Adithya-K-Shetty' 
+},
+{
+    usn: '4SO19CS050',
+    uname: 'Errol Ken Pereira',
+    position: 'UI/UX Team',
+    description: 'Avid developer actively looking for opportunities in the field of Web Development and graphic designing.',
+    email: 'errolkenpereira@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/errol-ken-pereira',
+    github: 'https://github.com/Errolken' 
+},
+{
+    usn: '4SO19CS161',
+    uname: 'Srujan Kashyap D',
+    position: 'CP Team',
+    description: 'Hi, I\'m a developer and a problem solver, love to solve different kinds of problems using code. Fascinated by computers and tech.',
+    email: 'srujanskd@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/srujankashyapd',
+    github: 'https://github.com/srujanskd' 
+},
+]
 ---
 <Base title="Google DSC SJEC Team">
-    <section>
-        <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-col text-center w-full mb-20">
-            <h1 class="text-2xl font-medium title-font mb-4 tracking-widest">OUR TEAM</h1>
-            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them.</p>
-          </div>
-        <div class="flex flex-wrap -m-4">
-        {
-            team.map(({ image, uname, position ,description ,message ,linkedin, github }) => (
-                <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-            <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={image}>
-        <div class="flex-grow sm:pl-8">
-          <h2 class="title-font font-medium text-lg">{uname}</h2>
-          <h3 class="text-gray-500 mb-3">{position}</h3>
-          <p class="mb-4">{description}</p>
-          <span class="inline-flex">
-            <a class="text-gray-500" href={github}>
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-              </svg>
-            </a>
-            <a class="ml-2 text-gray-500" href={linkedin}>
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-              </svg>
-            </a>
-            <a class="ml-2 text-gray-500" href={message}>
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-              </svg>
-            </a>
-          </span>
-        </div>
+  <section class="body-font">
+    <div class="container px-4 py-10 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h1 class="text-2xl font-medium title-font mb-4 tracking-widest">OUR TEAM</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Technical Team</p>
       </div>
-        ))
+      <div class="flex flex-wrap -m-4">
+        {
+          team.map((member) => (
+            <TeamCard 
+             usn={member.usn}
+             uname={member.uname}
+             position={member.position}
+             description={member.description}
+             email={member.email}
+             linkedin={member.linkedin}
+             github={member.github}
+            />
+          ))
         }
-        </div>
-    </div>
-      </section>
+      </div>
+  </div>
+</section>
 </Base>

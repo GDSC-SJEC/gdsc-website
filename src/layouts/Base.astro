@@ -1,24 +1,18 @@
 ---
-import { pwaInfo } from 'virtual:pwa-info';
 import { Seo } from 'astro-seo-meta';
-import Header from "#/components/Header.astro";
+import Header from '#/components/Header.astro';
 import Footer from "#/components/Footer.astro";
+import ThemeToggle from '#/components/ThemeToggle.astro';
 import "#/styles/index.css";
+import "@fontsource/inter/variable.css";
 
 const { title, description } = Astro.props;
 ---
-<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+<html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]">
   <head>
     <meta charset="utf-8" />
     <meta name="name" content="GDSC DSC SJEC">
-    <meta >
     <meta name="viewport" content="width=device-width" />
-    <meta name="theme-color" content="#317EFB"/>
-    <link
-    rel="apple-touch-icon"
-    sizes="180x180"
-    href="/favicons/apple-touch-icon.png"
-    />
     <Seo
       title={title}
       description={description}
@@ -49,37 +43,70 @@ const { title, description } = Astro.props;
       />
 
     </noscript>
-    <script src="src/pwa.ts"></script>
     <script is:inline>
-      const themeSaved = localStorage.getItem("theme");
-      if (themeSaved) {
-        document.documentElement.dataset.theme = themeSaved;
+      const primaryColorScheme = "none";
+      const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const currentTheme = localStorage.getItem("theme");
+      let theme;
+      if (currentTheme) {
+        theme = currentTheme === "dark" ? "dark" : "";
       } else {
-        const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)"
-        ).matches;
-        document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+        if (primaryColorScheme === "dark" || (primaryColorScheme === "none" && darkModeMediaQuery)) {
+          theme = "dark";
+        } else if (primaryColorScheme === "light") {
+          theme = "";
+        } else {
+          theme = darkModeMediaQuery ? "dark" : "";
+        }
       }
-      window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .addEventListener("change", (event) => {
-          if (!localStorage.getItem("theme")) {
-            document.documentElement.dataset.theme = event.matches
-              ? "dark"
-              : "light";
-          }
-        });
+      document.documentElement.className = theme;
+    </script>
+    <script>
+      const themeBtn = document.querySelector(".theme-toggle");
+      const htmlClassList = document.documentElement.classList;
+      themeBtn.addEventListener("click", function () {
+        if (htmlClassList.contains("dark")) {
+          localStorage.setItem("theme", "light");
+          htmlClassList.remove("dark");
+        } else {
+          localStorage.setItem("theme", "dark");
+          htmlClassList.add("dark");
+        }
+      });
+    </script>
+    <script>
+      const navBtn = document.querySelector(".nav-toggle");
+      const navMenu = document.querySelector(".nav-menu");
+      navBtn.addEventListener("click", function () {
+        navMenu.classList.toggle("hidden");
+      });
     </script>
   </head>
-  <body
-    class="h-full overflow-x-hidden text-base bg-default text-default selection:bg-secondary selection:text-white"
-  >
+  <body class="antialiased tracking-tight text-gray-900 bg-white dark:text-slate-200 dark:bg-slate-900">
     <Header />
 		<main>
-			<article>
 				<slot />
-			</article>
 		</main>
+    <ThemeToggle />
 		<Footer />
   </body>
 </html>
+
+<script is:inline>
+  function getUserTheme() {
+    try {
+      return localStorage.getItem("theme");
+    } catch {
+      return null;
+    }
+  }
+  const userTheme = getUserTheme();
+  const isDarkOs = matchMedia("(prefers-color-scheme: dark)").matches;
+  const isDark = userTheme === "dark" || (!userTheme && isDarkOs);
+  const html = document.documentElement;
+  if (isDark) {
+    html.classList.add("dark");
+  } else {
+    html.classList.remove("dark");
+  }
+</script>

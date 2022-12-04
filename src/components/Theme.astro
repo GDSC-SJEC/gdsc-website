@@ -1,56 +1,14 @@
 ---
 import { Icon } from "astro-icon";
+const {
+  label = "Toggle between Dark and Light mode",
+  class:
+    className = "text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center",
+  iconClass = "w-6 h-6",
+  iconName = "tabler:sun",
+} = Astro.props;
 ---
 
-<button
-  id="theme-switcher"
-  type="button"
-  class="transition-all origin-[right_center]"
->
-  <div id="icon-theme-light">
-    <Icon name="theme/light" class="h-8" />
-    <span class="sr-only">Use light theme</span>
-  </div>
-  <div id="icon-theme-dark">
-    <Icon name="theme/dark" class="h-8" />
-    <span class="sr-only">Use dark theme</span>
-  </div>
+<button type="button" class={className} aria-label={label} data-toggle-color-scheme>
+  <Icon name={iconName} class={iconClass} />
 </button>
-
-<script>
-  const themes = ["light", "dark"];
-  const button = document.querySelector("#theme-switcher");
-
-  const getThemeCurrent = () => document.documentElement.dataset.theme;
-  const getThemeNext = () => {
-    const themeCurrent = getThemeCurrent();
-    const indexThemeCurrent = themes.indexOf(themeCurrent);
-    return themes[(indexThemeCurrent + 1) % themes.length];
-  };
-
-  const updateIcon = () => {
-    const themeCurrent = getThemeCurrent();
-    document
-      .querySelector(`#icon-theme-${themeCurrent}`)
-      .classList.add("hidden");
-    const themeNext = getThemeNext();
-    document
-      .querySelector(`#icon-theme-${themeNext}`)
-      .classList.remove("hidden");
-  };
-
-  button.addEventListener("click", () => {
-    const themeNext = getThemeNext();
-    document.documentElement.dataset.theme = themeNext;
-    localStorage.setItem("theme", themeNext);
-    updateIcon();
-  });
-
-  updateIcon();
-</script>
-
-<style>
-  :global(.fixed-header) #theme-switcher {
-    @apply scale-100 ml-0;
-  }
-</style>
