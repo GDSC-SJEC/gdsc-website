@@ -1,18 +1,23 @@
 export const eventCardDetails = [
 	{
 		id: 1,
-		title: 'Google DSC Recruitment',
-		datetime: 'Currently In Progress',
-		image_url: './assets/img/events/recruitments.png',
-		description: `Do you wanna be part of the Google DSC team? Work and connect with the best in the college.
-			Recruitments are here! Register yourself first by filling the form.`,
+		title: 'Solution Challenge',
+		datetime: 'Coming Soon',
+		image_url: './assets/img/events/solution.webp',
+		description: `The Google Developer Student Clubs 2023 Solution Challenge mission is to solve for one of the United Nations’ 17 Sustainable Development Goals using Google technology.`,
 	},
 	{
 		id: 2,
-		title: 'GCCP Campaign',
-		datetime: 'November 14th - December 14th, 2022',
-		image_url: './assets/img/events/cloud.png',
-		description: `A Cloud Engineer plans, configures, sets up, and deploys cloud solutions.
-		Join this campaign to get collection of on-demand courses, labs, and skill badges that provide you with real-world, hands-on experience using Google Cloud technologies.`,
+		title: 'Web Campaign',
+		datetime: 'Coming Soon',
+		image_url: './assets/img/events/angular.png',
+		description: `Web Campaign introduces you to various Web technologies. You will learn basics of web technology (HTML+ CSS), Angular and many more that will help you to create end to end interactive web applications.`,
+	},
+	{
+		id: 3,
+		title: 'Flutter + Firebase Campaign',
+		datetime: 'Coming Soon',
+		image_url: './assets/img/events/flutter.png',
+		description: `Flutter is Google's UI toolkit that helps developers build apps for multiple platforms using a single codebase!`,
 	},
 ];

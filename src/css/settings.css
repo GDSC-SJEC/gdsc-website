@@ -70,13 +70,6 @@ body.ready {
   border-radius: 2px;
 }
 
-/* **************************** Selection **************************** */
-
-::selection {
-  color: var(--darkwhite);
-  background: var(--customcolor);
-}
-
 /* **************************** User Select None **************************** */
 
 a,
