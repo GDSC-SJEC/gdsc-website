@@ -20,4 +20,11 @@ export const eventCardDetails = [
 		image_url: './assets/img/events/flutter.png',
 		description: `Flutter is Google's UI toolkit that helps developers build apps for multiple platforms using a single codebase!`,
 	},
+	{
+		id: 4,
+		title: 'Code Jam',
+		datetime: '25th February 2023',
+		image_url: './assets/img/events/code-jam.jpg',
+		description: `Ready to solve fun, challenging problems? Coding Ninjas is hosting the Code Jam in collaboration with Google Developer Student Clubs, SJEC, giving you the opportunity to test and grow your coding abilities while getting a sample of the programming skills needed for a technical career.`,
+	},
 ];
